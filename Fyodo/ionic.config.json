@@ -1,0 +1,7 @@
+{
+  "name": "Fyodo",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

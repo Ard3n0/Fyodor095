@@ -1,0 +1,36 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Fyodor
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Fyodor</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <p> Я человек </p>
+    {{ok}}
+    <ion-item>
+      <ion-input [(ngModel)]="ok"></ion-input>
+    </ion-item>
+    <ion-button shape="round">Кнопка
+      <ion-ripple-effect class="custom-ripple"></ion-ripple-effect>
+    </ion-button> 
+      <ion-grid>
+        <ion-row>
+          <ion-col><b>Список телефончиков</b></ion-col>
+        </ion-row>
+        <ion-row  *ngFor="let phone of phones">
+          <ion-col offset="6" offset-md="4" offset-lg="2">{{phone.a}}</ion-col>
+          <ion-col offset="6" offset-md="4" offset-lg="2">{{phone.b}}</ion-col>
+        </ion-row>
+      </ion-grid>
+    
+  </div>
+</ion-content>
+
