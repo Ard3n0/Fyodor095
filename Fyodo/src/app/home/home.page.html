@@ -18,9 +18,6 @@
     <ion-item>
       <ion-input [(ngModel)]="ok"></ion-input>
     </ion-item>
-    <ion-button shape="round">Кнопка
-      <ion-ripple-effect class="custom-ripple"></ion-ripple-effect>
-    </ion-button> 
       <ion-grid>
         <ion-row>
           <ion-col><b>Список телефончиков</b></ion-col>
@@ -28,6 +25,9 @@
         <ion-row  *ngFor="let phone of phones">
           <ion-col offset="6" offset-md="4" offset-lg="2">{{phone.a}}</ion-col>
           <ion-col offset="6" offset-md="4" offset-lg="2">{{phone.b}}</ion-col>
+          <ion-col>
+            <ion-button (click) = "delrow(phone)">Кнопка</ion-button> 
+          </ion-col>
         </ion-row>
       </ion-grid>
     

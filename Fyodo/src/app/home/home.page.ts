@@ -15,6 +15,9 @@ export class HomePage {
     {a:"iphone", b:"15 pro"},
     {a:"samsung", b:"m52"}
   ]
+  delrow(phonesdel: {a: string, b: string}) {
+    this.phones = this.phones.filter(phone => phone !== phonesdel);
+  }
   constructor() {}
 
 }
